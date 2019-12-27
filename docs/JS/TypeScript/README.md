@@ -1,5 +1,3 @@
 # TypeScript
 
 > TODO:
-
-dfsdf

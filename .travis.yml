@@ -1,15 +1,16 @@
+sudo: required
 language: node_js
 node_js:
   - lts/*
-install:
-  - npm ci
-script:
-  - npm run build
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/.vuepress/dist
-  github_token: $GITHUB_TOKEN # 在 GitHub 中生成，用于允许 Travis 向你的仓库推送代码。在 Travis 的项目设置页面进行配置，设置为 secure variable
-  keep_history: true
-  on:
-    branch: master
+# before_install:
+#   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.9.4
+#   - export PATH="$HOME/.yarn/bin:$PATH"
+# cache: yarn
+# install: yarn
+cache: npm
+script: bash ./deploy.sh
+branches:
+  only:
+    - master
+notifications:
+  email: true
