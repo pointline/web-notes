@@ -4,7 +4,7 @@ module.exports = {
   title: "Notes",
   description: "前端笔记",
   // 子路径
-  base: "/",
+  base: "/web-notes/",
   // 页面heade部分需要增加的内容
   head: [
     // icon
