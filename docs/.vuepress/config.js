@@ -42,7 +42,9 @@ module.exports = {
     // 添加最后更新的时间
     lastUpdated: "Last Updated", // string | boolean
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-    repo: "pointline/map-notes",
+    repo: "pointline/web-notes",
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
     smoothScroll: true
   },
   // webpack配置
