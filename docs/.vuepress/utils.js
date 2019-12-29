@@ -18,6 +18,7 @@ module.exports = () => {
       sidebar[parentDir].push({
         title: folder,
         collapsable: true,
+        sidebarDepth: 3,
         children: fs
           .readdirSync(`${dir}/${folder}`)
           .filter(fileName => !fileName.includes("README.md"))
