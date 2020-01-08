@@ -165,3 +165,131 @@ color = 'anythingElse'; // Error
 ```
 
 这允许你很容易地拥有像字符串枚举+常量这样的类型，如上例所示
+
+## 复合类型
+
+TypeScript 的复合类型可以分为两类：set 和 map。set 是指一个无序的、无重复元素的集合。而 map 则和 JS 中的对象一样，是一些没有重复键的键值对
+
+```typescript
+// set
+type Size = "small" | "default" | "big" | "large";
+// map
+interface IA {
+  a: string;
+  b: number;
+}
+```
+
+### 复合类型间的转换
+
+```typescript
+// map => set
+type IAKeys = keyof IA; // 'a' | 'b'
+type IAValues = IA[keyof IA]; // string | number
+
+// set => map
+type SizeMap = {
+  [k in Size]: number;
+};
+// 等价于
+type SizeMap2 = {
+  small: number;
+  default: number;
+  big: number;
+  large: number;
+};
+```
+
+### map 上的操作
+
+```typescript
+// 索引取值
+type SubA = IA["a"]; // string
+
+// 属性修饰符
+type Person = {
+  age: number;
+  readonly name: string; // 只读属性，初始化时必须赋值
+  nickname?: string; // 可选属性，相当于 | undefined
+};
+```
+
+## 映射类型和同态变换
+
+在 TypeScript 中，有以下几种常见的映射类型。它们的共同点是只接受一个传入类型，生成的类型中 key 都来自于 keyof 传入的类型，value 都是传入类型的 value 的变种
+
+```typescript
+type Partial<T> = { [P in keyof T]?: T[P] }; // 将一个map所有属性变为可选的
+type Required<T> = { [P in keyof T]-?: T[P] }; // 将一个map所有属性变为必选的
+type Readonly<T> = { readonly [P in keyof T]: T[P] }; // 将一个map所有属性变为只读的
+type Mutable<T> = { -readonly [P in keyof T]: T[P] }; // ts标准库未包含，将一个map所有属性变为可写的
+```
+
+此类变换，在 TS 中被称为同态变换。在进行同态变换时，TS 会先复制一遍传入参数的属性修饰符，再应用定义的变换
+
+```typescript
+interface Fruit {
+  readonly name: string;
+  size: number;
+}
+type PF = Partial<Fruit>; // PF.name既只读又可选，PF.size只可选
+```
+
+## 其他常用工具类型
+
+### 由 set 生成 map
+
+```typescript
+type Record<K extends keyof any, T> = { [P in K]: T };
+
+type Size = "small" | "default" | "big";
+/*
+{
+    small: number
+    default: number
+    big: number
+}
+ */
+type SizeMap = Record<Size, number>;
+```
+
+### 保留 map 的一部分
+
+```typescript
+type Pick<T, K extends keyof T> = { [P in K]: T[P] };
+/*
+{
+    default: number
+    big: number
+}
+ */
+type BiggerSizeMap = Pick<SizeMap, "default" | "big">;
+```
+
+### 删除 map 的一部分
+
+```typescript
+type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
+/*
+{
+    default: number
+}
+ */
+type DefaultSizeMap = Omit<BiggerSizeMap, "big">;
+```
+
+### 保留 set 的一部分
+
+```typescript
+type Extract<T, U> = T extends U ? T : never;
+
+type Result = 1 | 2 | 3 | "error" | "success";
+type StringResult = Extract<Result, string>; // 'error' | 'success
+```
+
+### 删除 set 的一部分
+
+```typescript
+type Exclude<T, U> = T extends U ? never : T;
+type NumericResult = Exclude<Result, string>; // 1 | 2 | 3
+```

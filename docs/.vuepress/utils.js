@@ -16,7 +16,7 @@ module.exports = () => {
 
     childrenDir.forEach(folder => {
       sidebar[parentDir].push({
-        title: folder,
+        title: folder.replace(/\d+-/, ""),
         collapsable: true,
         sidebarDepth: 3,
         children: fs
