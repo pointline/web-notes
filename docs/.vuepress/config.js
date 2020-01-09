@@ -17,8 +17,11 @@ module.exports = {
         items: [{ text: "CSS", link: "/Base/Css/" }]
       },
       {
-        text: "JS",
-        items: [{ text: "TypeScript", link: "/JS/TypeScript/" }]
+        text: "Language",
+        items: [
+          { text: "JavaScript", link: "/Language/JavaScript/" },
+          { text: "TypeScript", link: "/Language/TypeScript/" }
+        ]
       },
       {
         text: "Framework",
