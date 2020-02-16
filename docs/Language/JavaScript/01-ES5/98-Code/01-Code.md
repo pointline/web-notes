@@ -144,3 +144,15 @@ Math.asin(1); // 1.5707963267948966
 Math.acos(1); // 0
 Math.atan(1); // 0.7853981633974483
 ```
+
+## 将数组的空元素变为 undefined
+
+```javascript
+Array.apply(null, ["a", , "b"]);
+// [ 'a', undefined, 'b' ]
+
+Array.apply(null, a).forEach(print);
+// a
+// undefined
+// b
+```
