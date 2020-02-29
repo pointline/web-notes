@@ -164,6 +164,8 @@ document.getElementById('para').addEventListener('click', hide, false);
 
 `上面代码中，<em>是<p>的子节点，点击<em>或者点击<p>，都会导致监听函数执行。这时，e.target总是指向原始点击位置的那个节点，而e.currentTarget指向事件传播过程中正在经过的那个节点。由于监听函数只有事件经过时才会触发，所以e.currentTarget总是等同于监听函数内部的this`
 
+> currentTarget 是绑定事件的元素。target是当前点击的元素
+
 ### Event.type
 
 `Event.type属性返回一个字符串，表示事件类型。事件的类型是在生成事件的时候指定的。该属性只读`

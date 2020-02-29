@@ -283,7 +283,7 @@ document.referrer
 + `浏览器开始解析 HTML 文档，document.readyState属性等于loading`
 + `浏览器遇到 HTML 文档中的<script>元素，并且没有async或defer属性，就暂停解析，开始执行脚本，这时document.readyState属性还是等于loading`
 + `HTML 文档解析完成，document.readyState属性变成interactive`
-+ `浏览器等待图片、样式表、字体文件等外部资源加载完成，一旦全部加载完成，document.readyState属性变+ 成complete`
++ `浏览器等待图片、样式表、字体文件等外部资源加载完成，一旦全部加载完成，document.readyState属性变成complete`
 
 下面的代码用来检查网页是否加载成功
 
