@@ -26,6 +26,10 @@ module.exports = {
       {
         text: "Framework",
         items: [{ text: "React", link: "/Framework/React/" }]
+      },
+      {
+        text: "Package",
+        link: '/Package/'
       }
     ],
     sidebar: generate(),

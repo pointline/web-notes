@@ -2,7 +2,8 @@ const sidebarMap = [
   "Base/Css",
   "Language/JavaScript",
   "Language/TypeScript",
-  "Framework/React"
+  "Framework/React",
+  "Package"
 ];
 
 module.exports = sidebarMap;
