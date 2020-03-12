@@ -1,9 +1,11 @@
 const sidebarMap = [
-  "Base/Css",
+  "Language/CSS",
   "Language/JavaScript",
   "Language/TypeScript",
   "Framework/React",
-  "Package"
+  "Package",
+  "Book/E-book",
+  "Article",
 ];
 
 module.exports = sidebarMap;

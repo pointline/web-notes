@@ -13,12 +13,9 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: "Base",
-        items: [{ text: "CSS", link: "/Base/Css/" }]
-      },
-      {
         text: "Language",
         items: [
+          { text: "CSS", link: "/Language/CSS/" },
           { text: "JavaScript", link: "/Language/JavaScript/" },
           { text: "TypeScript", link: "/Language/TypeScript/" }
         ]
@@ -30,7 +27,15 @@ module.exports = {
       {
         text: "Package",
         link: '/Package/'
-      }
+      },
+      {
+        text: "Book",
+        items: [{ text: "E-book", link: "/Book/E-book/" }]
+      },
+      {
+        text: "Article",
+        items: [{ text: "CSS", link: "/Article/01-CSS/" }]
+      },
     ],
     sidebar: generate(),
     // sidebar: {
