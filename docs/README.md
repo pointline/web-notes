@@ -4,5 +4,5 @@ heroImage: /assets/notes.svg
 heroText:
 tagline:
 actionText: Next →
-actionLink: /Base/Css/
+actionLink: /Languages/JavaScript/
 ---

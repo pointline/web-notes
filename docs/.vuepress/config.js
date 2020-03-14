@@ -13,29 +13,25 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: "Language",
+        text: "Languages",
         items: [
-          { text: "CSS", link: "/Language/CSS/" },
-          { text: "JavaScript", link: "/Language/JavaScript/" },
-          { text: "TypeScript", link: "/Language/TypeScript/" }
+          { text: "CSS", link: "/Languages/CSS/" },
+          { text: "JavaScript", link: "/Languages/JavaScript/" },
+          { text: "TypeScript", link: "/Languages/TypeScript/" }
         ]
       },
       {
-        text: "Framework",
-        items: [{ text: "React", link: "/Framework/React/" }]
+        text: "Frameworks",
+        items: [{ text: "React", link: "/Frameworks/React/" }]
       },
       {
-        text: "Package",
-        link: '/Package/'
-      },
-      {
-        text: "Book",
-        items: [{ text: "E-book", link: "/Book/E-book/" }]
-      },
-      {
-        text: "Article",
-        items: [{ text: "CSS", link: "/Article/01-CSS/" }]
-      },
+        text: "Collect",
+        items: [
+          { text: "Package", link: "/Package/"},
+          { text: "E-Book", link: "/E-Book/" },
+          { text: "Article", link: "/Article/"}
+        ]
+      }
     ],
     sidebar: generate(),
     // sidebar: {
@@ -57,6 +53,7 @@ module.exports = {
     repo: "pointline/web-notes",
     // 默认是 false, 设置为 true 来启用
     editLinks: true,
+    docsDir: 'docs',
     smoothScroll: true
   },
   // webpack配置

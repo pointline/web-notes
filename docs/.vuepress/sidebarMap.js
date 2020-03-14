@@ -1,10 +1,10 @@
 const sidebarMap = [
-  "Language/CSS",
-  "Language/JavaScript",
-  "Language/TypeScript",
-  "Framework/React",
+  "Languages/CSS",
+  "Languages/JavaScript",
+  "Languages/TypeScript",
+  "Frameworks/React",
   "Package",
-  "Book/E-book",
+  "E-Book",
   "Article",
 ];
 
