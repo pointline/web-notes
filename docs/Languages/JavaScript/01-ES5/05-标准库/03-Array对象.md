@@ -641,7 +641,7 @@ function isEven(x) { return x % 2 === 0 }
 
 ### reduce(), reduceRight()
 
-reduce方法和reduceRight方法依次处理数组的每个成员，最终累计为一个值。它们的差别是，reduce是从左到右处理（从第一个成员到最后一个成员），reduceRight则是从右到左（从最后一个成员到第一个成员），其它完全一样
+reduce方法和reduceRight方法依次处理数组的每个成员，最终累计为一个值。它们的差别是，reduce是从左到右处理（从第一个成员到最后一个成员），reduceRight则是从右到左（从最后一个成员到第一个成员），其他完全一样
 
 ```javascript
 [1, 2, 3, 4, 5].reduce(function (a, b) {

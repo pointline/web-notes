@@ -177,9 +177,9 @@ Object.getOwnPropertyNames(obj).length // 2
 
 一般情况下，几乎总是使用Object.keys方法，遍历对象的属性
 
-### 其它方法
+### 其他方法
 
-除了上面提到的两个方法，Object还有不少其它静态方法，将在后文逐一详细介绍
+除了上面提到的两个方法，Object还有不少其他静态方法，将在后文逐一详细介绍
 
 #### 对象属性模型的相关方法
 
@@ -421,7 +421,7 @@ obj.hasOwnProperty('toString') // false
   + Object构造函数的用法与工具方法很相似，几乎一模一样。使用时，可以接受一个参数，如果该参数是一个对象，则直接返回这个对象；如果是一个原始类型的值，则返回该值对应的包装对象
 + Object静态方法
   + Object.keys()，返回可枚举所有属性名。Object.getOwnPropertyNames()，返回自身所有属性名（包括不可枚举的）
-+ 其它方法
++ 其他方法
   + 对象属性模型的相关方法
     + Object.getOwnPropertyDescriptor()：获取某个属性的描述对象
     + Object.defineProperty()：通过描述对象，定义某个属性

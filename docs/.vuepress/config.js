@@ -31,6 +31,12 @@ module.exports = {
           { text: "E-Book", link: "/E-Book/" },
           { text: "Article", link: "/Article/"}
         ]
+      },
+      {
+        text: "Others",
+        items: [
+          { text: "Tools", link: "/Tools/"}
+        ]
       }
     ],
     sidebar: generate(),

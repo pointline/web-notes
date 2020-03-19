@@ -6,6 +6,7 @@ const sidebarMap = [
   "Package",
   "E-Book",
   "Article",
+  "Tools"
 ];
 
 module.exports = sidebarMap;
