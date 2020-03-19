@@ -37,6 +37,7 @@ function deepReaddirTreeSync(filePath, relativePath) {
     .filter(fileName => !(fileName.indexOf("README") > -1));
 
   dir.forEach(fileName => {
+    if(fileName === 'media') return;
     if (isDirSync(`${filePath}/${fileName}`)) {
       sidebar.push({
         title: fileName.replace(/\d+-/, ""),
