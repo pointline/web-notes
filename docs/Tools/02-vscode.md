@@ -333,6 +333,7 @@ json 配置括号突出显示
 - 向上/向下移动一行：`alt + 上下箭头`
 - 复制光标向上或向下批量添加修改内容：`cmd + alt + 上下箭头`
 - 跳转到指定行：`ctrl + G`
+- 打开 Markdown 预览：`cmd + K + V`
 
 ## Experience
 
