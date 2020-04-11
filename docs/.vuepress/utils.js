@@ -2,6 +2,8 @@ const path = require("path");
 const fs = require("fs");
 const sidebarMap = require("./sidebarMap");
 
+const filterDir = 'media|.DS_Store'.toLowerCase()
+
 function log(data) {
   fs.writeFileSync(__dirname + "/log.json", JSON.stringify(data), err => {
     if (err) return;
@@ -37,7 +39,7 @@ function deepReaddirTreeSync(filePath, relativePath) {
     .filter(fileName => !(fileName.indexOf("README") > -1));
 
   dir.forEach(fileName => {
-    if(fileName === 'media') return;
+    if(filterDir.search(fileName.toLowerCase()) !== -1) return;
     if (isDirSync(`${filePath}/${fileName}`)) {
       sidebar.push({
         title: fileName.replace(/\d+-/, ""),
@@ -66,5 +68,6 @@ module.exports = () => {
     sidebar[keyPath] = deepReaddirTreeSync(dir, `/${k}`);
   });
 
+  // log(sidebar)
   return sidebar;
 };

@@ -25,9 +25,9 @@ module.exports = {
         items: [{ text: "React", link: "/Frameworks/React/" }]
       },
       {
-        text: "Collect",
+        text: "Collections",
         items: [
-          { text: "Package", link: "/Package/"},
+          { text: "Packages", link: "/Packages/"},
           { text: "E-Book", link: "/E-Book/" },
           { text: "Article", link: "/Article/"}
         ]
