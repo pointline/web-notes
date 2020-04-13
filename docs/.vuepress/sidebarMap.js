@@ -3,7 +3,7 @@ const sidebarMap = [
   "Languages/JavaScript",
   "Languages/TypeScript",
   "Frameworks/React",
-  "Packages",
+  "Package",
   "E-Book",
   "Article",
   "Tools"

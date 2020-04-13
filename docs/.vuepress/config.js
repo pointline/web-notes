@@ -25,11 +25,13 @@ module.exports = {
         items: [{ text: "React", link: "/Frameworks/React/" }]
       },
       {
-        text: "Collections",
+        text: "Collect",
         items: [
-          { text: "Packages", link: "/Packages/"},
+          { text: "Package", link: "/Package/"},
           { text: "E-Book", link: "/E-Book/" },
-          { text: "Article", link: "/Article/"}
+          { text: "Article", link: "/Article/"},
+          { text: "Blog", link: "/Blog/" },
+          { text: "Website", link: "/Website/" },
         ]
       },
       {
