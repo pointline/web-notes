@@ -16,6 +16,7 @@ module.exports = {
         text: "Languages",
         items: [
           { text: "CSS", link: "/Languages/CSS/" },
+          { text: "HTML", link: "/Languages/HTML/" },
           { text: "JavaScript", link: "/Languages/JavaScript/" },
           { text: "TypeScript", link: "/Languages/TypeScript/" }
         ]
@@ -23,6 +24,10 @@ module.exports = {
       {
         text: "Frameworks",
         items: [{ text: "React", link: "/Frameworks/React/" }]
+      },
+      {
+        text: "Book",
+        link: '/Book/'
       },
       {
         text: "Collect",

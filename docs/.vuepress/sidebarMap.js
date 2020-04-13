@@ -1,12 +1,14 @@
 const sidebarMap = [
   "Languages/CSS",
+  "Languages/HTML",
   "Languages/JavaScript",
   "Languages/TypeScript",
   "Frameworks/React",
   "Package",
   "E-Book",
   "Article",
-  "Tools"
+  "Tools",
+  "Book"
 ];
 
 module.exports = sidebarMap;
