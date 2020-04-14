@@ -15,8 +15,7 @@
   },
   "lint-staged": {
     "docs/**/*.md": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "keywords": [
