@@ -1,5 +1,3 @@
 # Website
 
-> TODO: Collect website
-
-- [牛客网](https://www.nowcoder.com/)
+- [statcounter](https://gs.statcounter.com/)：统计浏览器使用情况
