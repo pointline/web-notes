@@ -1,7 +1,5 @@
 # jQuery Plugins
 
-> TODO: JQuery Plugin
-
 - [imagesLoaded](https://imagesloaded.desandro.com/)
 - [Infinite Scroll](https://infinite-scroll.com/)
 - [flickity](https://flickity.metafizzy.co/)：Touch, responsive, flickable carousels
